@@ -1,6 +1,7 @@
 package www.mys.com.sbjni.utils.file;
 
 import www.mys.com.sbjni.utils.LogUtils;
+
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -183,7 +184,7 @@ public class FileUtils {
     public static boolean inputStream2File(InputStream inputStream, File file) {
         boolean result = false;
         if (inputStream == null || file == null || !file.exists()) {
-            LogUtils.log("message is error.");
+            LogUtils.log("message is error.inputStream=" + inputStream + ";file=" + file);
         } else {
             OutputStream outputStream;
             try {

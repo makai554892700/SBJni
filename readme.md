@@ -104,6 +104,7 @@
 * 普通运行需要添加 -Djava.library.path=<libs的路径> 参数，但是真实生产环境可能不方便这么处理，因此在InitJob及NativeUtils处理相关。
     * 主要是复制静态/动态库到jar同目录的runLibs下，再将runLibs目录添加至java.library.path环境变量下
     * 最后利用 System.load 加载绝对路径下的静态/动态库
+    * 另外如果使用InitJob及NativeUtils处理so加载的话，so包需要在名字前加lib
 ## 更多CMake相关可[参考](https://github.com/makai554892700/CMakeDemo)或者自行百度
 
 

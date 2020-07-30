@@ -8,9 +8,10 @@ public class NativeUtils {
 
     static {
         try {
-            System.load(InitJob.ROOT_LIBS_DIR
-                    + File.separatorChar + "NativeUtils"
-                    + InitJob.LIB_END);
+//            System.load(InitJob.ROOT_LIBS_DIR
+//                    + File.separatorChar + "NativeUtils"
+//                    + InitJob.LIB_END);
+            System.loadLibrary("NativeUtils");
         } catch (UnsatisfiedLinkError e) {
             LogUtils.log("System.load error.e=" + e);
             System.exit(1);
